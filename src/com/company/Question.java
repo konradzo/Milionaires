@@ -1,9 +1,10 @@
 package com.company;
 
 /**
- * Created by slickender on 16.08.2017.
+ * Created by slickender on 20.01.2018.
  */
 public class Question {
+
     private  String text;
     private boolean isTrue;
 
@@ -13,7 +14,6 @@ public class Question {
     }
 
     public Question(String text) {
-
         this.text = text;
     }
 
@@ -25,12 +25,12 @@ public class Question {
         this.text = text;
     }
 
-    public boolean isTrue() {
-        return isTrue;
-    }
-
     public void setTrue(boolean aTrue) {
         isTrue = isTrue;
+    }
+
+    public boolean isTrue() {
+        return isTrue;
     }
 
 

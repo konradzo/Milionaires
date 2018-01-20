@@ -11,9 +11,7 @@ import java.util.List;
 public class MilionairesFrame extends JFrame implements ActionListener {
 
     private List<Question> questionsList = new ArrayList<>();
-
     private QuestionGenerator questionGenerator;
-
     private int currentQuestionIndex;
     private JLabel questionLabel;
     private User user;
@@ -27,7 +25,6 @@ public class MilionairesFrame extends JFrame implements ActionListener {
     public void setQuestionGenerator(QuestionGenerator questionGenerator) {
         this.questionGenerator = questionGenerator;
     }
-
 
     public List<Question> getQuestionsList() {
         return questionsList;
@@ -49,7 +46,6 @@ public class MilionairesFrame extends JFrame implements ActionListener {
         user = new User();
     }
 
-
     public void addLabelAndButtonsToFrame() {
         questionLabel = new JLabel(questionsList.get(currentQuestionIndex).getText(), SwingConstants.CENTER);
         add(questionLabel);
@@ -70,12 +66,8 @@ public class MilionairesFrame extends JFrame implements ActionListener {
         });
     }
 
-
     @Override
-    public void actionPerformed(ActionEvent e)
-
-    {
-        // -2
+    public void actionPerformed(ActionEvent e) {
         JButton clickedButton = (JButton) e.getSource();
         Question currentQuestion = questionsList.get(currentQuestionIndex);
         if (clickedButton == yesButton && currentQuestion.isTrue())
@@ -90,15 +82,9 @@ public class MilionairesFrame extends JFrame implements ActionListener {
             yesButton.setEnabled(false);
             JOptionPane.showMessageDialog(null, "Liczba zdobytych punktów: " + user.getNumberOfPoints());
         }
-
-
-
-
-
     }
 
     public void setLabelTitle() {
         questionLabel.setText(questionsList.get(currentQuestionIndex).getText());
     }
-
 }
